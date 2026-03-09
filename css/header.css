@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+/* HEADER */
+#top {width: 100%; padding: 0 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; }
+#top ul {display: flex; gap: 20px;}
+#top h1 {width: 30%;}
+#top h1 img {width: 100%}

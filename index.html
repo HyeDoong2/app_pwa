@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A'pieu - v1np</title>
+  <!-- PWA 매니페스트 파일 연결 -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="description" content="퓨어하게 빛나는 나를 위한 뷰티 브랜드 어퓨! 지금 이대로 퓨어하게, 있는 그대로 어퓨하게. 인기 메이크업·스킨케어·베스트 셀러 제품 정보를 확인하세요.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="A'pieu, 메이크업, 스킨케어, 이벤트, 베스트 셀러">
+  <link rel="canonical" href="https://www.ableshop.kr/">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/common.js" defer></script>
+</head>
+<body>
+  <div id="headers"></div>
+
+  <div id="menus"></div> 
+
+  <div id="container">
+    <div class="swiper mySwiper main_img">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/index/banner1.jpg" alt="배너1">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/index/banner2.png" alt="배너2">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/index/banner3.png" alt="배너3">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/index/banner4.png" alt="배너4">
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div><!-- main_img -->
+
+      <!-- Swiper JS (banner) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+
+
+    <section>
+      <h2>BEST SELLER</h2>
+        <div id="best_seller">
+          <figure>
+            <a href="#"><img src="images/index/best1.png" alt="product"></a>
+            <figcaption>
+              <a href="#" class="best_txt1">워터락 피니셔</a>
+              <span class="best_txt2">워터 파우더로 텁텁함 ZERO</span>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="#"><img src="images/index/best2.png" alt="product"></a>
+            <figcaption>
+              <a href="#" class="best_txt1">파스텔 블러셔</a>
+              <span class="best_txt2">텁텁함 없는 뽀-용한 컬러  </span>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="#"><img src="images/index/best3.png" alt="product"></a>
+            <figcaption>
+              <a href="#" class="best_txt1">과즙팡 젤리 틴트</a>
+              <span class="best_txt2">하이 글로시 텍스처 립 틴트</span>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="#"><img src="images/index/best4.png" alt="product"></a>
+            <figcaption>
+              <a href="#" class="best_txt1">과즙팡 워터 블러셔</a>
+              <span class="best_txt2">투명하고 맑은 컬러감</span>
+            </figcaption>
+          </figure>
+        </div><!-- best_seller -->
+
+        <div id="photo">
+          <img src="images/index/photo.png" alt="with,a'pieu">
+        </div>
+    </section>
+
+  </div><!-- container -->
+
+  <div id="footers"></div>
+
+  <!-- 서비스 워커 등록 -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./service_worker.js')
+        .then(function () {
+          console.log('서비스 워커가 등록됨!');
+        })
+    }
+    // 브라우저가 서비스 워커를 지원하는 경우, ./service_worker.js 파일을 서비스 워커로 등록하고, 성공적으로 등록되면 콘솔에 '서비스 워커가 등록됨!'이라는 메시지를 출력하는 기능 수행
+  </script>
+
+
+</body>
+</html>
